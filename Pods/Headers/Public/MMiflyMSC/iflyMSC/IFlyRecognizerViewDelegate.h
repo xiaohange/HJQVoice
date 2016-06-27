@@ -1,0 +1,1 @@
+../../../../MMiflyMSC/iflyMSCSDK/iflyMSC.framework/Headers/IFlyRecognizerViewDelegate.h

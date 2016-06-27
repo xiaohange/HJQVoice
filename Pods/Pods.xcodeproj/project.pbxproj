@@ -1,0 +1,329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0BD4FCC31B6E1D4B09A7F1183DF989C /* Pods-HJQVoiceDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB672B02C6DAE24DB2159EAE9C0A942 /* Pods-HJQVoiceDemo-dummy.m */; };
+		E1694E97F1E56323782E2C1A59CD267F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		34D8CDE978DBC5C93BE4D46995F7D023 /* Pods-HJQVoiceDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HJQVoiceDemo-frameworks.sh"; sourceTree = "<group>"; };
+		35664AB553D8D472248CF4667281EDF4 /* IFlyFlowerCollector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFlyFlowerCollector.h; path = iflyMSCSDK/sunflower/IFlyFlowerCollector.h; sourceTree = "<group>"; };
+		48C807084FE5241F0051000DB6663FDE /* Pods-HJQVoiceDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HJQVoiceDemo-resources.sh"; sourceTree = "<group>"; };
+		82A39FFFFAF264AAD4887E56AB8AD698 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = iflyMSCSDK/iflyMSC.framework; sourceTree = "<group>"; };
+		8B8172C9E258B76EE5D47E52B9012182 /* Pods-HJQVoiceDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HJQVoiceDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AFB03512FCFB06779F67FF9877E33557 /* Pods-HJQVoiceDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HJQVoiceDemo.release.xcconfig"; sourceTree = "<group>"; };
+		AFE7CE2E0BDEA6591C9743087CEAE5D0 /* Pods-HJQVoiceDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HJQVoiceDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BCC9818A1EA89A80683DCF60D041B6D6 /* Pods-HJQVoiceDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HJQVoiceDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DBB672B02C6DAE24DB2159EAE9C0A942 /* Pods-HJQVoiceDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HJQVoiceDemo-dummy.m"; sourceTree = "<group>"; };
+		E82581A17352028A28AC2D75EA75EDFC /* libPods-HJQVoiceDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HJQVoiceDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2770762922A97DDC9C591CF51830A1C /* libSunFlower.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSunFlower.a; path = iflyMSCSDK/sunflower/libSunFlower.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9400435B1888423D388650593F629FC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1694E97F1E56323782E2C1A59CD267F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		206EB81CF5EE8868D6D0D465D5926BD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82A39FFFFAF264AAD4887E56AB8AD698 /* iflyMSC.framework */,
+				F2770762922A97DDC9C591CF51830A1C /* libSunFlower.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5A69128BF075687E7A9BB79D6A72A3DE /* MMiflyMSC */ = {
+			isa = PBXGroup;
+			children = (
+				35664AB553D8D472248CF4667281EDF4 /* IFlyFlowerCollector.h */,
+				206EB81CF5EE8868D6D0D465D5926BD5 /* Frameworks */,
+			);
+			path = MMiflyMSC;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				A84A55D415E690628557E172F26DE500 /* Pods */,
+				AE2577B66B16360AC139F20563300296 /* Products */,
+				F426694163F9131F7AD24880D21D5A1C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9FEDADE06B4246815C006240E6CE95EA /* Pods-HJQVoiceDemo */ = {
+			isa = PBXGroup;
+			children = (
+				AFE7CE2E0BDEA6591C9743087CEAE5D0 /* Pods-HJQVoiceDemo-acknowledgements.markdown */,
+				8B8172C9E258B76EE5D47E52B9012182 /* Pods-HJQVoiceDemo-acknowledgements.plist */,
+				DBB672B02C6DAE24DB2159EAE9C0A942 /* Pods-HJQVoiceDemo-dummy.m */,
+				34D8CDE978DBC5C93BE4D46995F7D023 /* Pods-HJQVoiceDemo-frameworks.sh */,
+				48C807084FE5241F0051000DB6663FDE /* Pods-HJQVoiceDemo-resources.sh */,
+				BCC9818A1EA89A80683DCF60D041B6D6 /* Pods-HJQVoiceDemo.debug.xcconfig */,
+				AFB03512FCFB06779F67FF9877E33557 /* Pods-HJQVoiceDemo.release.xcconfig */,
+			);
+			name = "Pods-HJQVoiceDemo";
+			path = "Target Support Files/Pods-HJQVoiceDemo";
+			sourceTree = "<group>";
+		};
+		A84A55D415E690628557E172F26DE500 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A69128BF075687E7A9BB79D6A72A3DE /* MMiflyMSC */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AE2577B66B16360AC139F20563300296 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E82581A17352028A28AC2D75EA75EDFC /* libPods-HJQVoiceDemo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F426694163F9131F7AD24880D21D5A1C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FEDADE06B4246815C006240E6CE95EA /* Pods-HJQVoiceDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6ADB41F41C8FAAA091B5DA234AD83B6F /* Pods-HJQVoiceDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 623B49D7984136A622D85CF86374F40A /* Build configuration list for PBXNativeTarget "Pods-HJQVoiceDemo" */;
+			buildPhases = (
+				05974EA4E0C928E276957E331125BAE2 /* Sources */,
+				9400435B1888423D388650593F629FC7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-HJQVoiceDemo";
+			productName = "Pods-HJQVoiceDemo";
+			productReference = E82581A17352028A28AC2D75EA75EDFC /* libPods-HJQVoiceDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = AE2577B66B16360AC139F20563300296 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6ADB41F41C8FAAA091B5DA234AD83B6F /* Pods-HJQVoiceDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05974EA4E0C928E276957E331125BAE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0BD4FCC31B6E1D4B09A7F1183DF989C /* Pods-HJQVoiceDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1F69845C074AFBA901CA07CF07A6D618 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFB03512FCFB06779F67FF9877E33557 /* Pods-HJQVoiceDemo.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3FA2475660FFC880302AD18E29B2E5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B55725985FF88C516CD2AE6DB043D203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCC9818A1EA89A80683DCF60D041B6D6 /* Pods-HJQVoiceDemo.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F325026B55060D3B22BEC0BAB5FA7344 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FA2475660FFC880302AD18E29B2E5FC /* Debug */,
+				F325026B55060D3B22BEC0BAB5FA7344 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		623B49D7984136A622D85CF86374F40A /* Build configuration list for PBXNativeTarget "Pods-HJQVoiceDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B55725985FF88C516CD2AE6DB043D203 /* Debug */,
+				1F69845C074AFBA901CA07CF07A6D618 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
