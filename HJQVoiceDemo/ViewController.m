@@ -48,7 +48,7 @@
 #pragma mark ------ HJQInputViewDelegate ------
 - (void)configureTopView:(UITextField*)textField
 {
-    HJQInputAccessoryView *aaa = [[HJQInputAccessoryView alloc] initWithTitle:@"按住 说出你查的企业" andInputTextFiled:keywordTextFiled];
+    HJQInputAccessoryView *aaa = [[HJQInputAccessoryView alloc] initWithTitle:@"按住 说出你查的东东" andInputTextFiled:keywordTextFiled];
     aaa.delegate = self;
 }
 
