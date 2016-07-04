@@ -10,7 +10,8 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/XiaoHanGe/HJQVoice.git", :tag => s.version.to_s }
   s.source_files  = "HJQVoice", "HJQVoice/**/*.{h,m,xib}"
   s.resources = "HJQVoice/**/*.png"
-  s.frameworks = "CoreLocation", "CoreTelephony", "AVFoundation", "AddressBook", "AudioToolbox", "SystemConfiguration",  "QuartzCore", "CoreGraphics"
+  s.frameworks = "CoreLocation", "CoreTelephony", "AVFoundation", "AddressBook", "AudioToolbox", "SystemConfiguration",  "QuartzCore", "CoreGraphics", "libz"
   s.vendored_frameworks = "HJQVoice/iflyMSC.framework"
   s.requires_arc = true
+  s.libraries = "z","c++"
 end
