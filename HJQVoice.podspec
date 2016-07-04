@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.source_files  = "HJQVoice/iflyMSCSDK/sunflower/*.{h,m}", "HJQVoice/**/*.{h,m,xib}"
   s.resources = "HJQVoice/**/*.png"
   s.frameworks = "Foundation", "UIKit","CoreLocation", "CoreTelephony", "AVFoundation", "AddressBook", "AudioToolbox", "SystemConfiguration",  "QuartzCore", "CoreGraphics", "libz"
-  s.vendored_libraries = "HJQVoice/iflyMSCSDK/sunflower.a"
+  s.vendored_libraries = "HJQVoice/iflyMSCSDK/sunflower/libsunflower.a"
   s.vendored_frameworks = "HJQVoice/iflyMSCSDK/iflyMSC.framework"
   s.requires_arc = true
   s.libraries = "z","c++"
