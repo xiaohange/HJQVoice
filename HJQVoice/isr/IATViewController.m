@@ -407,7 +407,7 @@
         }else {
             // 错误暂不传递
 //            text = [NSString stringWithFormat:@"发生错误：%d %@", error.errorCode,error.errorDesc];
-#warning 后续自己添加提示框
+
             // 后续自己添加提示框
 //         [SVProgressHUD showErrorWithStatus:@"识别错误,请重试"];
         }

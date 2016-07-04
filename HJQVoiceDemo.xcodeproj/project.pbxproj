@@ -666,8 +666,6 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/HJQVoiceDemo/HJQVoice/lib",
-					"$(PROJECT_DIR)/HJQVoice/lib",
 					"$(PROJECT_DIR)/HJQVoice",
 				);
 				GCC_PREFIX_HEADER = "";
@@ -686,8 +684,6 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/HJQVoiceDemo/HJQVoice/lib",
-					"$(PROJECT_DIR)/HJQVoice/lib",
 					"$(PROJECT_DIR)/HJQVoice",
 				);
 				GCC_PREFIX_HEADER = "";
