@@ -13,9 +13,7 @@
 
 /* Begin PBXFileReference section */
 		34D8CDE978DBC5C93BE4D46995F7D023 /* Pods-HJQVoiceDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HJQVoiceDemo-frameworks.sh"; sourceTree = "<group>"; };
-		35664AB553D8D472248CF4667281EDF4 /* IFlyFlowerCollector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFlyFlowerCollector.h; path = iflyMSCSDK/sunflower/IFlyFlowerCollector.h; sourceTree = "<group>"; };
 		48C807084FE5241F0051000DB6663FDE /* Pods-HJQVoiceDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HJQVoiceDemo-resources.sh"; sourceTree = "<group>"; };
-		82A39FFFFAF264AAD4887E56AB8AD698 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = iflyMSCSDK/iflyMSC.framework; sourceTree = "<group>"; };
 		8B8172C9E258B76EE5D47E52B9012182 /* Pods-HJQVoiceDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HJQVoiceDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AFB03512FCFB06779F67FF9877E33557 /* Pods-HJQVoiceDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HJQVoiceDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -24,7 +22,6 @@
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DBB672B02C6DAE24DB2159EAE9C0A942 /* Pods-HJQVoiceDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HJQVoiceDemo-dummy.m"; sourceTree = "<group>"; };
 		E82581A17352028A28AC2D75EA75EDFC /* libPods-HJQVoiceDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HJQVoiceDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2770762922A97DDC9C591CF51830A1C /* libSunFlower.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSunFlower.a; path = iflyMSCSDK/sunflower/libSunFlower.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,15 +36,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		206EB81CF5EE8868D6D0D465D5926BD5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				82A39FFFFAF264AAD4887E56AB8AD698 /* iflyMSC.framework */,
-				F2770762922A97DDC9C591CF51830A1C /* libSunFlower.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -56,21 +44,11 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5A69128BF075687E7A9BB79D6A72A3DE /* MMiflyMSC */ = {
-			isa = PBXGroup;
-			children = (
-				35664AB553D8D472248CF4667281EDF4 /* IFlyFlowerCollector.h */,
-				206EB81CF5EE8868D6D0D465D5926BD5 /* Frameworks */,
-			);
-			path = MMiflyMSC;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				A84A55D415E690628557E172F26DE500 /* Pods */,
 				AE2577B66B16360AC139F20563300296 /* Products */,
 				F426694163F9131F7AD24880D21D5A1C /* Targets Support Files */,
 			);
@@ -89,14 +67,6 @@
 			);
 			name = "Pods-HJQVoiceDemo";
 			path = "Target Support Files/Pods-HJQVoiceDemo";
-			sourceTree = "<group>";
-		};
-		A84A55D415E690628557E172F26DE500 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5A69128BF075687E7A9BB79D6A72A3DE /* MMiflyMSC */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		AE2577B66B16360AC139F20563300296 /* Products */ = {

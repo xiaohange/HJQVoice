@@ -8,10 +8,9 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "7.0"
   s.ios.deployment_target = "7.0"
   s.source       = { :git => "https://github.com/XiaoHanGe/HJQVoice.git", :tag => s.version.to_s }
-  s.source_files  = "HJQVoice", "HJQVoice/**/*.{h,m}"
+  s.source_files  = "HJQVoice", "HJQVoice/**/*.{h,m,xib}"
   s.resources = "HJQVoice/**/*.png"
   s.frameworks = "CoreLocation", "CoreTelephony", "AVFoundation", "AddressBook", "AudioToolbox", "SystemConfiguration",  "QuartzCore", "CoreGraphics"
-  s.librarie = "libSunFlower.a"
-  s.dependency "MMiflyMSC", "~> 0.0.5"
+  s.vendored_frameworks = "HJQVoice/iflyMSC.framework"
   s.requires_arc = true
 end

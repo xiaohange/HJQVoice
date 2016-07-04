@@ -43,8 +43,10 @@
 		110037611D20F90800200BCB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110037601D20F90800200BCB /* AVFoundation.framework */; };
 		110037631D20F91100200BCB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110037621D20F91100200BCB /* CoreTelephony.framework */; };
 		110037651D20F91F00200BCB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110037641D20F91F00200BCB /* CoreLocation.framework */; };
-		110037671D20F92900200BCB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 110037661D20F92900200BCB /* libz.tbd */; };
 		1100376A1D20FB7D00200BCB /* UIButton+GCAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 110037691D20FB7D00200BCB /* UIButton+GCAlignment.m */; };
+		11A6BF7D1D2A303700155112 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A6BF7C1D2A303700155112 /* iflyMSC.framework */; };
+		11A6BF7E1D2A31F800155112 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 110037661D20F92900200BCB /* libz.tbd */; };
+		6D7B8EE3184F30E581EF5296 /* libPods-HJQVoiceDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2E3B726ACB330CB2AAF9D7 /* libPods-HJQVoiceDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,8 +121,10 @@
 		110037661D20F92900200BCB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		110037681D20FB7D00200BCB /* UIButton+GCAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+GCAlignment.h"; sourceTree = "<group>"; };
 		110037691D20FB7D00200BCB /* UIButton+GCAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GCAlignment.m"; sourceTree = "<group>"; };
+		11A6BF7C1D2A303700155112 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		13625A4C0E94F1A2CEEC7A02 /* Pods-HJQVoiceDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJQVoiceDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HJQVoiceDemo/Pods-HJQVoiceDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7300816502A6D5E4E07951B1 /* Pods-HJQVoiceDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJQVoiceDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HJQVoiceDemo/Pods-HJQVoiceDemo.release.xcconfig"; sourceTree = "<group>"; };
+		DF2E3B726ACB330CB2AAF9D7 /* libPods-HJQVoiceDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HJQVoiceDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,15 +132,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				110037671D20F92900200BCB /* libz.tbd in Frameworks */,
+				11A6BF7E1D2A31F800155112 /* libz.tbd in Frameworks */,
 				110037651D20F91F00200BCB /* CoreLocation.framework in Frameworks */,
 				110037631D20F91100200BCB /* CoreTelephony.framework in Frameworks */,
 				110037611D20F90800200BCB /* AVFoundation.framework in Frameworks */,
 				1100375F1D20F8FF00200BCB /* AddressBook.framework in Frameworks */,
 				1100375D1D20F8EF00200BCB /* AudioToolbox.framework in Frameworks */,
 				1100375B1D20F8DF00200BCB /* SystemConfiguration.framework in Frameworks */,
+				11A6BF7D1D2A303700155112 /* iflyMSC.framework in Frameworks */,
 				110037591D20F8D500200BCB /* QuartzCore.framework in Frameworks */,
 				110037571D20F8CD00200BCB /* CoreGraphics.framework in Frameworks */,
+				6D7B8EE3184F30E581EF5296 /* libPods-HJQVoiceDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +231,7 @@
 		1100371F1D20F75D00200BCB /* HJQVoice */ = {
 			isa = PBXGroup;
 			children = (
+				11A6BF7C1D2A303700155112 /* iflyMSC.framework */,
 				110037201D20F75D00200BCB /* HJQInputAccessoryView.h */,
 				110037211D20F75D00200BCB /* HJQInputAccessoryView.m */,
 				110037221D20F75D00200BCB /* HJQPulseView.h */,
@@ -294,6 +301,7 @@
 				1100375A1D20F8DF00200BCB /* SystemConfiguration.framework */,
 				110037581D20F8D500200BCB /* QuartzCore.framework */,
 				110037561D20F8CD00200BCB /* CoreGraphics.framework */,
+				DF2E3B726ACB330CB2AAF9D7 /* libPods-HJQVoiceDemo.a */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -660,6 +668,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HJQVoiceDemo/HJQVoice/lib",
 					"$(PROJECT_DIR)/HJQVoice/lib",
+					"$(PROJECT_DIR)/HJQVoice",
 				);
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = HJQVoiceDemo/Info.plist;
@@ -679,6 +688,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HJQVoiceDemo/HJQVoice/lib",
 					"$(PROJECT_DIR)/HJQVoice/lib",
+					"$(PROJECT_DIR)/HJQVoice",
 				);
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = HJQVoiceDemo/Info.plist;
