@@ -2,17 +2,15 @@
 //  IFlyISVRecognizer.h
 //  ISV
 //
-//  Created by wangdan on 14-9-6.
-//  Copyright (c) 2014年 IFlyTEK. All rights reserved.
+//  Created by cheng ping on 13-9-6.
+//  Copyright (c) 2013年 IFlyTEK. All rights reserved.
+//  modified by wang dan on 2014-09-04
 //
-
 
 #import <Foundation/Foundation.h>
 #import "IFlyISVDelegate.h"
 
-/**
- *  声纹接口类
- */
+
 @interface IFlyISVRecognizer : NSObject 
 {
 
@@ -27,7 +25,7 @@
    IFLyISVRecognizer *recognizer=[IFlyISVRecognizer creteRecognizer: self];
  */
 
-+(instancetype) sharedInstance;
++(IFlyISVRecognizer *) sharedInstance;
 
 
 /*
@@ -59,9 +57,8 @@
    YES: the engine is listenning;
    No : the engine is not listenning
  */
+
 -(BOOL) isListening;
-
-
 
 /*
  * Used to query or delete the voiceprint model in server
@@ -83,6 +80,7 @@
    while the vid is nil, server can still query or delete the voiceprint model 
    by other params
  */
+
 -(BOOL) sendRequest:(NSString*)cmd authid:(NSString *)auth_id  pwdt:(int)pwdt ptxt:(NSString *)ptxt vid:(NSString *)vid err:(int *)err;
 
 
@@ -131,4 +129,3 @@
 
 
 @end
-

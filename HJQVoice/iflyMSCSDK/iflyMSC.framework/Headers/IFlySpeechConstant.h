@@ -136,23 +136,6 @@
  */
 +(NSString*)PARAMS;
 
-/**
- *  加密参数
- *
- *  支持类型：ssl 加密  tcp 非加密 默认：tcp
- *  建议对安全性要求较高时使用ssl。
- *
- *  @return 加密参数key
- */
-+(NSString*)PROT_TYPE;
-
-/**
- *  ssl证书内容
- *
- *  @return ssl证书内容key
- */
-+(NSString*)SSL_CERT;
-
 /*!
  *  录音音量返回时间间隔。
  *
@@ -232,22 +215,6 @@
  */
 +(NSString*)RESULT_ENCODING;
 
-/**
- *  是否初始化播放器
- *  SDK内部播放器采用音频队列实现，有部分外部需求需要自定义音频队列，可以通过此开关控制
- *  0:不初始化，非0或者参数为空:初始化，默认初始化
- *  @return 是否初始化播放器 参数key
- */
-+(NSString*)PLAYER_INIT;
-
-/**
- *  是否初始化录音器
- *  SDK内部录音器采用音频队列实现，有部分外部需求需要自定义音频队列，可以通过此开关控制
- *  0:不初始化，非0或者参数为空:初始化，默认初始化
- *  @return 是否初始化录音器 参数key
- */
-+(NSString*)RECORDER_INIT;
-
 #pragma mark -  合成相关设置key
 /*!
  *  语速
@@ -294,7 +261,6 @@
  *  @return VAD后端点超时key
  */
 +(NSString*)VAD_EOS;
-
 
 /*
  *  云端支持如下发音人：
@@ -375,19 +341,6 @@
 +(NSString*)VOICE_NAME;
 
 /*!
- * 发音人ID key。
- * @return 发音人ID key
- */
-+(NSString*)VOICE_ID;
-
-/*!
- * 发音人语种 key。
- * 参数值：0:Auto 1:中文 2英文 ，默认 0.
- * @return 发音人ID key
- */
-+(NSString*)VOICE_LANG;
-
-/*!
  *  音量
  *  范围（0~100） 默认值:50
  *
@@ -419,13 +372,12 @@
 /**
  *  预合成文本
  *
- *  @return 预合成文本参数key
+ *  @return 约合成文本参数key
  */
 +(NSString*)NEXT_TEXT;
 
 /**
  *  是否需要打开MPPlayingInfocenter
- *  是否需要初始化MPPlayerCenter的属性;0:需要初始化，1:不初始化
  *
  *  @return 是否需要打开MPPlayingInfocenter 参数key
  */
@@ -464,14 +416,14 @@
 +(NSString*)ASR_PTT;
 
 /*!
- *  ASR_PTT 参数值：设置带标点符号
+ *  设置是否有标点符号
  *
  *  @return 设置是有标点符号Value
  */
 +(NSString*)ASR_PTT_HAVEDOT;
 
 /*!
- *  ASR_PTT 参数值：设置不带标点符号
+ *  设置是否有标点符号
  *
  *  @return 设置是无标点符号Value
  */
@@ -598,22 +550,6 @@
  */
 +(NSString*) ISE_AUDIO_PATH;
 
-
-/*!
- *  朗读跟踪，只对句子和篇章有效<br>
- *    可选值：enable:开启;disable:关闭。
- *
- *  @return 朗读跟踪 key
- */
-+(NSString*)ISE_AUTO_TRACKING;
-
-/*!
- *  跟踪模式<br>
- *  可选值：easy:简单;hard:复杂。
- *
- *  @return 跟踪模式 key
- */
-+(NSString*)ISE_TRACK_TYPE;
 
 #pragma mark -  语音+业务key
 /**
@@ -755,96 +691,5 @@
  *  @return 数据压缩编码key
  */
 + (NSString*)MFV_DATA_ENCODING;
-
-#pragma mark - 人脸业务key
-
-//1. sub	  取值: wfr	                      用途: 用于区分业务类型,web访问方式中，nginx配置不用使用，但是在结构化日志和染色日志记录中使用。
-//2. sst	  取值: reg、verify、detect、align  用途: 指定本路会话是属于何种性质
-// + 人脸图像注册(reg)：上传图像，验证图像的有效性，然后存储起来，作为数据源。
-// + 人脸图像验证(verify)：通过与指定源图像比较，验证人脸相似性。
-// + 人脸图像检测(detect)：能够检测出不同姿态方位的人脸在图中的位置。
-// + 人脸图像聚焦(align)：在给定人脸框下自动标定出两眼、鼻尖、嘴角的坐标。
-//3. aue	取值: raw	                      用途: 图像压缩格式，现在引擎不支持图像压缩，aue只能取值raw
-//4. pset   取值: 整数	                      用途: 人脸识别验证阈值，取值可以是负数也可以是整数。
-//5. skip   取值: true/false	                  用途: 后台图片处理是否进行过滤。true表示不过滤，false表示过滤
-//6. gid	取值: ***********	              用途: 图像模型id，如：4a6c124ed6b78436ee5aac4563f13eb5
-//7. appid  取值:用户申请的appid                 用途: 验证用户
-
-
-/** sub 默认值:wfr
- * 用于区分业务类型,web访问方式中，nginx配置不用使用，但是在结构化日志和染色日志记录中使用。
- */
-+ (NSString*) FACE_SUB;
-
-/** WFR
- * sub参数的默认值
- */
-+ (NSString*) FACE_WFR;
-
-/** sst
- * 指定本路会话是属于何种性质
- */
-+ (NSString*) FACE_SST;
-
-/** REG
- * 人脸图像注册(reg)：上传图像，验证图像的有效性，然后存储起来，作为数据源。
- */
-+ (NSString*) FACE_REG;
-/** VERIFY
- * 人脸图像验证(verify)：通过与指定源图像比较，验证人脸相似性。
- */
-+ (NSString*) FACE_VERIFY;
-/** DETECT
- * 人脸图像检测(detect)：能够检测出不同姿态方位的人脸在图中的位置。
- */
-+ (NSString*) FACE_DETECT;
-/** ALIGN
- * 人脸图像聚焦(align)：在给定人脸框下自动标定出两眼、鼻尖、嘴角的坐标。
- */
-+ (NSString*) FACE_ALIGN;
-
-/** ATTR
- * 面部属性识别(attr)：对面部属性进行识别：例如秃顶、刘海、大嘴、模糊、眼镜等。
- */
-+ (NSString*) FACE_ATTR;
-
-
-/** AUE
- * 图像压缩格式，现在引擎不支持图像压缩，aue只能取值raw
- */
-+ (NSString*) FACE_AUE;
-
-/** RAW
- * AUE参数的值
- */
-+ (NSString*) FACE_RAW;
-
-/** PSET
- * 人脸识别验证阈值，取值可以是负数也可以是整数。
- */
-+ (NSString*) FACE_PSET;
-
-/** SKIP
- * 后台图片处理是否进行过滤。true表示不过滤，false表示过滤，传入字符串@“true”或@“false”
- */
-+ (NSString*) FACE_SKIP;
-
-/** GID
- * 图像模型id，如：4a6c124ed6b78436ee5aac4563f13eb5
- */
-+ (NSString*) FACE_GID;
-
-/**
- *  auth_id
- *  用于用户注册和登录、查询、删除等业务时标识用户身份
- *
- *  @return 用户标识
- */
-+ (NSString*)FACE_AUTH_ID;
-
-/** DVC
- * 用户设备编号,用于验证用户
- */
-+ (NSString*) FACE_DVC;
 
 @end

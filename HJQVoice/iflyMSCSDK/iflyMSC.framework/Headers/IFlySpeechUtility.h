@@ -12,6 +12,12 @@
 
 @class IFlySpeechError;
 
+//typedef enum : NSUInteger {
+//    IFlyEngineModeAuto = 0,     /* 云端使用MSC，本地优先使用语音+ */
+//    IFlyEngineModeMsc,          /* 只使用MSC */
+//    IFlyEngineModePlus,         /* 本地只使用语音+(受平台限制，云端无法使用语音+） */
+//} IFlyEngineMode;
+
 /**
  *  引擎模式
  */
@@ -25,54 +31,29 @@ typedef NS_ENUM(NSUInteger,IFlyEngineMode){
      */
     IFlyEngineModeMsc,
     /**
-     *  本地只使用语音+(受平台限制，云端无法使用语音+）
+     *  地只使用语音+(受平台限制，云端无法使用语音+）
      */
     IFlyEngineModePlus,
 };
 
+typedef enum : NSUInteger {
+    IFlySpeechPlusServiceTypeNone,      /* 打开语音+主界面 */
+    IFlySpeechPlusServiceTypeTTS,       /* 获取合成资源 */
+    IFlySpeechPlusServiceTypeISR,       /* 获取识别资源（未开放） */
+    IFlySpeechPlusServiceTypeIVW,       /* 获取唤醒资源（未开放）*/
+} IFlySpeechPlusServiceType;
 
-/**
- *  服务类型
- */
-typedef NS_ENUM(NSUInteger,IFlySpeechPlusServiceType){
-    /**
-     *  打开语音+主界面
-     */
-    IFlySpeechPlusServiceTypeNone=0,
-    /**
-     *  获取合成资源
-     */
-    IFlySpeechPlusServiceTypeTTS,
-    /**
-     *  获取识别资源（未开放）
-     */
-    IFlySpeechPlusServiceTypeISR,
-    /**
-     *  获取唤醒资源（未开放）
-     */
-    IFlySpeechPlusServiceTypeIVW,
-} ;
-
-/** 语记返回回调
+/** 语音+返回回调
  */
 @protocol IFlySpeechplusDelegate <NSObject>
 
-/**
- *  发生错误
- *
- *  @param errorCode 错误码
- */
-- (void)onError:(int)errorCode;
+- (void)onError:(int)errorCode;     /*发生错误，errorCode，错误码*/
 
-/**
- *  服务正常结束
- */
-- (void)onCompleted;
+- (void)onCompleted;    /*服务正常结束*/
 
 @end
 
-/** 
- * 用户配置
+/** 用户配置
  */
 @interface IFlySpeechUtility : NSObject
 
@@ -125,9 +106,6 @@ typedef NS_ENUM(NSUInteger,IFlySpeechPlusServiceType){
  */
 @property (nonatomic, readonly) IFlyEngineMode engineMode;
 
-/**
- *  语记协议委托
- */
 @property (nonatomic, assign) id<IFlySpeechplusDelegate> delegate;
 
 @end
@@ -142,7 +120,7 @@ typedef NS_ENUM(NSUInteger,IFlySpeechPlusServiceType){
  *
  *  @return 已安装返回YES，否则返回NO
  */
-+ (BOOL)checkServiceInstalled;
+- (BOOL)checkServiceInstalled;
 
 /**
  *  获取讯飞语音+下载地址进行下载，安装完成后即可使用服务。
@@ -150,11 +128,10 @@ typedef NS_ENUM(NSUInteger,IFlySpeechPlusServiceType){
  *
  *  @return 讯飞语音+在App Store下载地址
  */
-+ (NSString *)componentUrl;
+- (NSString *)componentUrl;
 
 
 /**
- *  注意：此接口废弃，不再需要使用
  *  处理语音+使用URL启动第三方应用程序时传递的数据
  *  需要在 application:openURL:sourceApplication:annotation:或者application:handleOpenURL中调用。
  *

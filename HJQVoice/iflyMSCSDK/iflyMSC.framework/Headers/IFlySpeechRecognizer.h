@@ -1,56 +1,40 @@
 //
-//  IFlySpeechUnderstander.h
+//  IFlySpeechRecognizer.h
 //  MSC
 //
-//  Created by iflytek on 2014-03-12.
-//  Copyright (c) 2014年 iflytek. All rights reserved.
+//  Created by iflytek on 13-3-19.
+//  Copyright (c) 2013年 iflytek. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@class IFlySpeechError;
-@protocol IFlySpeechRecognizerDelegate;
+#import "IFlySpeechRecognizerDelegate.h"
+
+#define IFLY_AUDIO_SOURCE_MIC    @"1"
+#define IFLY_AUDIO_SOURCE_STREAM @"-1"
 
 /*!
- *  语义理解接口
+ *  语音识别类
+ *   此类现在设计为单例，你在使用中只需要创建此对象，不能调用release/dealloc函数去释放此对象。所有关于语音识别的操作都在此类中。
  */
-@interface IFlySpeechUnderstander : NSObject
+@interface IFlySpeechRecognizer : NSObject<IFlySpeechRecognizerDelegate>
+
+/** 设置委托对象 */
+@property(nonatomic,assign) id<IFlySpeechRecognizerDelegate> delegate ;
 
 /*!
- *  是否正在语义理解
- */
-@property (readonly)  BOOL isUnderstanding;
-
-/*!
- *  设置委托对象
- */
-@property(nonatomic,retain) id<IFlySpeechRecognizerDelegate> delegate ;
-
-/*!
- *  创建语义理解对象的单例
+ *  返回识别对象的单例
  *
- *  @return 语义理解对象
+ *  @return 识别对象的单例
  */
-+(instancetype) sharedInstance;
++ (id) sharedInstance;
 
 /*!
- *  开始义理解
- *    同时只能进行一路会话，这次会话没有结束不能进行下一路会话，否则会报错。若有需要多次回话，请在onError回调返回后请求下一路回话。
+ *  销毁识别对象。
  *
- *  @return 成功返回YES，失败返回NO
+ *  @return 成功返回YES,失败返回NO
  */
-- (BOOL) startListening;
-
-/*!
- *  停止录音
- *    调用此函数会停止录音，并开始进行语义理解
- */
-- (void) stopListening;
-
-/*!
- *  取消本次会话
- */
-- (void) cancel;
+- (BOOL) destroy;
 
 /*
  *  | ------------- |-----------------------------------------------------------
@@ -89,8 +73,8 @@
  */
 
 /*!
- *  设置语义理解引擎的参数
- *    语义理解的引擎参数(key)取值如下：
+ *  设置识别引擎的参数
+ *    识别的引擎参数(key)取值如下：
  *  <table>
  *  <thead>
  *  <tr><th>*参数</th><th><em>描述</em></th>
@@ -109,26 +93,82 @@
  *  </tbody>
  *  </table>
  *  @param value 参数对应的取值
- *  @param key   语义理解引擎参数
+ *  @param key   识别引擎参数
  *
  *  @return 成功返回YES；失败返回NO
  */
 -(BOOL) setParameter:(NSString *) value forKey:(NSString*)key;
 
 /*!
- *  写入音频流
+ *  获取识别引擎参数
  *
- *  @param audioData 音频数据
+ *  @param key 参数key
  *
- *  @return 写入成功返回YES，写入失败返回NO
+ *  @return 参数值
  */
-- (BOOL) writeAudio:(NSData *) audioData;
+-(NSString*) parameterForKey:(NSString *)key;
 
 /*!
- *  销毁语义理解对象。
+ *  开始识别
+ *     同时只能进行一路会话，这次会话没有结束不能进行下一路会话，否则会报错。若有需要多次回话，
+ *  请在onError回调返回后请求下一路回话。
  *
  *  @return 成功返回YES；失败返回NO
  */
-- (BOOL) destroy;
+- (BOOL) startListening;
+
+/*!
+ *  停止录音
+ *    调用此函数会停止录音，并开始进行语音识别
+ */
+- (void) stopListening;
+
+/*!
+ *  取消本次会话
+ */
+- (void) cancel;
+
+/*!
+ *  上传语法
+ *
+ *  @param completionHandler 上传语法完成回调
+ *  @param grammarType       语法类型
+ *  @param grammarContent    语法内容
+ *
+ *  @return 错误码
+ */
+- (int) buildGrammarCompletionHandler:(IFlyOnBuildFinishCompletionHandler)completionHandler
+                          grammarType:(NSString *)grammarType
+                       grammarContent:(NSString *)grammarContent;
+
+/** 是否正在识别
+ */
+@property (nonatomic, readonly) BOOL isListening;
 
 @end
+
+/*!
+ *  音频流识别
+ *   音频流识别可以将文件分段写入
+ */
+@interface IFlySpeechRecognizer(IFlyStreamRecognizer)
+
+/*!
+*  写入音频流
+*    此方法的使用示例如下:
+* <pre><code>[_iFlySpeechRecognizer setParameter:@"audio_source" value:@"-1"];
+* [_iFlySpeechRecognizer startListening];
+* [_iFlySpeechRecognizer writeAudio:audioData1];
+* [_iFlySpeechRecognizer writeAudio:audioData2];
+* ...
+* [_iFlySpeechRecognizer stopListening];
+* </code></pre>
+*
+*  @param audioData 音频数据
+*
+*  @return 写入成功返回YES，写入失败返回NO
+*/
+- (BOOL) writeAudio:(NSData *) audioData;
+
+@end
+
