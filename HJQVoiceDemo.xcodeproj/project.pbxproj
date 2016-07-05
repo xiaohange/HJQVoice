@@ -44,8 +44,6 @@
 		110037631D20F91100200BCB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110037621D20F91100200BCB /* CoreTelephony.framework */; };
 		110037651D20F91F00200BCB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110037641D20F91F00200BCB /* CoreLocation.framework */; };
 		1100376A1D20FB7D00200BCB /* UIButton+GCAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 110037691D20FB7D00200BCB /* UIButton+GCAlignment.m */; };
-		116B650F1D2A3B9C001C6694 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116B650B1D2A3B9C001C6694 /* iflyMSC.framework */; };
-		116B65101D2A3B9C001C6694 /* libSunFlower.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 116B650E1D2A3B9C001C6694 /* libSunFlower.a */; };
 		11A6BF801D2A379D00155112 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A6BF7F1D2A379D00155112 /* libz.tbd */; };
 		6D7B8EE3184F30E581EF5296 /* libPods-HJQVoiceDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2E3B726ACB330CB2AAF9D7 /* libPods-HJQVoiceDemo.a */; };
 /* End PBXBuildFile section */
@@ -121,9 +119,6 @@
 		110037641D20F91F00200BCB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		110037681D20FB7D00200BCB /* UIButton+GCAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+GCAlignment.h"; sourceTree = "<group>"; };
 		110037691D20FB7D00200BCB /* UIButton+GCAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GCAlignment.m"; sourceTree = "<group>"; };
-		116B650B1D2A3B9C001C6694 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
-		116B650D1D2A3B9C001C6694 /* IFlyFlowerCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFlyFlowerCollector.h; sourceTree = "<group>"; };
-		116B650E1D2A3B9C001C6694 /* libSunFlower.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSunFlower.a; sourceTree = "<group>"; };
 		11A6BF7F1D2A379D00155112 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		13625A4C0E94F1A2CEEC7A02 /* Pods-HJQVoiceDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJQVoiceDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HJQVoiceDemo/Pods-HJQVoiceDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7300816502A6D5E4E07951B1 /* Pods-HJQVoiceDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJQVoiceDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HJQVoiceDemo/Pods-HJQVoiceDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,9 +137,7 @@
 				1100375F1D20F8FF00200BCB /* AddressBook.framework in Frameworks */,
 				1100375D1D20F8EF00200BCB /* AudioToolbox.framework in Frameworks */,
 				1100375B1D20F8DF00200BCB /* SystemConfiguration.framework in Frameworks */,
-				116B650F1D2A3B9C001C6694 /* iflyMSC.framework in Frameworks */,
 				110037591D20F8D500200BCB /* QuartzCore.framework in Frameworks */,
-				116B65101D2A3B9C001C6694 /* libSunFlower.a in Frameworks */,
 				110037571D20F8CD00200BCB /* CoreGraphics.framework in Frameworks */,
 				6D7B8EE3184F30E581EF5296 /* libPods-HJQVoiceDemo.a in Frameworks */,
 			);
@@ -235,7 +228,6 @@
 		1100371F1D20F75D00200BCB /* HJQVoice */ = {
 			isa = PBXGroup;
 			children = (
-				116B650A1D2A3B9C001C6694 /* iflyMSCSDK */,
 				110037201D20F75D00200BCB /* HJQInputAccessoryView.h */,
 				110037211D20F75D00200BCB /* HJQInputAccessoryView.m */,
 				110037221D20F75D00200BCB /* HJQPulseView.h */,
@@ -308,24 +300,6 @@
 				DF2E3B726ACB330CB2AAF9D7 /* libPods-HJQVoiceDemo.a */,
 			);
 			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		116B650A1D2A3B9C001C6694 /* iflyMSCSDK */ = {
-			isa = PBXGroup;
-			children = (
-				116B650B1D2A3B9C001C6694 /* iflyMSC.framework */,
-				116B650C1D2A3B9C001C6694 /* sunflower */,
-			);
-			path = iflyMSCSDK;
-			sourceTree = "<group>";
-		};
-		116B650C1D2A3B9C001C6694 /* sunflower */ = {
-			isa = PBXGroup;
-			children = (
-				116B650D1D2A3B9C001C6694 /* IFlyFlowerCollector.h */,
-				116B650E1D2A3B9C001C6694 /* libSunFlower.a */,
-			);
-			path = sunflower;
 			sourceTree = "<group>";
 		};
 		DEA47D3E06051BA56A1F622C /* Pods */ = {
@@ -689,17 +663,20 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HJQVoice",
-					"$(PROJECT_DIR)/HJQVoice/iflyMSCSDK",
 				);
 				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+				);
 				INFOPLIST_FILE = HJQVoiceDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/HJQVoice/iflyMSCSDK/sunflower",
+					"$(PROJECT_DIR)/HJQVoice",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "------------.HJQVoiceDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HJQVoiceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -713,17 +690,20 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HJQVoice",
-					"$(PROJECT_DIR)/HJQVoice/iflyMSCSDK",
 				);
 				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+				);
 				INFOPLIST_FILE = HJQVoiceDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/HJQVoice/iflyMSCSDK/sunflower",
+					"$(PROJECT_DIR)/HJQVoice",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "------------.HJQVoiceDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HJQVoiceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
