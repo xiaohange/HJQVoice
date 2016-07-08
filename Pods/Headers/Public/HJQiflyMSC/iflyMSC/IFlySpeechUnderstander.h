@@ -1,0 +1,1 @@
+../../../../HJQiflyMSC/iflyMSCSDK/iflyMSC.framework/Headers/IFlySpeechUnderstander.h

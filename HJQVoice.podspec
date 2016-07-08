@@ -10,7 +10,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/XiaoHanGe/HJQVoice.git", :tag => s.version.to_s }
   s.source_files  = "HJQVoice/**/*.{h,m,xib}"
   s.resources = "HJQVoice/**/*.png"
-  s.frameworks = "Foundation", "UIKit","CoreLocation", "CoreTelephony", "AVFoundation", "AddressBook", "AudioToolbox", "SystemConfiguration",  "QuartzCore", "CoreGraphics", "libz"
   s.requires_arc = true
-  s.dependency  "MMiflyMSC"
+  s.dependency  "HJQiflyMSC"
 end

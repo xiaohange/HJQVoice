@@ -12,11 +12,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B37C7DFA77484C52D5878D34EF4369A /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = iflyMSCSDK/iflyMSC.framework; sourceTree = "<group>"; };
 		34D8CDE978DBC5C93BE4D46995F7D023 /* Pods-HJQVoiceDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HJQVoiceDemo-frameworks.sh"; sourceTree = "<group>"; };
-		35664AB553D8D472248CF4667281EDF4 /* IFlyFlowerCollector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFlyFlowerCollector.h; path = iflyMSCSDK/sunflower/IFlyFlowerCollector.h; sourceTree = "<group>"; };
 		48C807084FE5241F0051000DB6663FDE /* Pods-HJQVoiceDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HJQVoiceDemo-resources.sh"; sourceTree = "<group>"; };
-		82A39FFFFAF264AAD4887E56AB8AD698 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = iflyMSCSDK/iflyMSC.framework; sourceTree = "<group>"; };
+		5EDE8865CF74E04C6819097779EB6430 /* IFlyFlowerCollector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFlyFlowerCollector.h; path = iflyMSCSDK/sunflower/IFlyFlowerCollector.h; sourceTree = "<group>"; };
 		8B8172C9E258B76EE5D47E52B9012182 /* Pods-HJQVoiceDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HJQVoiceDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		8B9A7AE01104ADCA771892C3D4F7D6DA /* libSunFlower.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSunFlower.a; path = iflyMSCSDK/sunflower/libSunFlower.a; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AFB03512FCFB06779F67FF9877E33557 /* Pods-HJQVoiceDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HJQVoiceDemo.release.xcconfig"; sourceTree = "<group>"; };
 		AFE7CE2E0BDEA6591C9743087CEAE5D0 /* Pods-HJQVoiceDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HJQVoiceDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -24,7 +25,6 @@
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DBB672B02C6DAE24DB2159EAE9C0A942 /* Pods-HJQVoiceDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HJQVoiceDemo-dummy.m"; sourceTree = "<group>"; };
 		E82581A17352028A28AC2D75EA75EDFC /* libPods-HJQVoiceDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HJQVoiceDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2770762922A97DDC9C591CF51830A1C /* libSunFlower.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSunFlower.a; path = iflyMSCSDK/sunflower/libSunFlower.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,13 +39,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		206EB81CF5EE8868D6D0D465D5926BD5 /* Frameworks */ = {
+		0091A63E7FD4ADC94C3A124B8BEFCB7D /* HJQiflyMSC */ = {
 			isa = PBXGroup;
 			children = (
-				82A39FFFFAF264AAD4887E56AB8AD698 /* iflyMSC.framework */,
-				F2770762922A97DDC9C591CF51830A1C /* libSunFlower.a */,
+				5EDE8865CF74E04C6819097779EB6430 /* IFlyFlowerCollector.h */,
+				4D9268FC8CBE0AA42D493FAACA461001 /* Frameworks */,
 			);
-			name = Frameworks;
+			path = HJQiflyMSC;
 			sourceTree = "<group>";
 		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
@@ -56,13 +56,13 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5A69128BF075687E7A9BB79D6A72A3DE /* MMiflyMSC */ = {
+		4D9268FC8CBE0AA42D493FAACA461001 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				35664AB553D8D472248CF4667281EDF4 /* IFlyFlowerCollector.h */,
-				206EB81CF5EE8868D6D0D465D5926BD5 /* Frameworks */,
+				2B37C7DFA77484C52D5878D34EF4369A /* iflyMSC.framework */,
+				8B9A7AE01104ADCA771892C3D4F7D6DA /* libSunFlower.a */,
 			);
-			path = MMiflyMSC;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -70,7 +70,7 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				A84A55D415E690628557E172F26DE500 /* Pods */,
+				E21ACBE196BE223DD279A668D2129CD5 /* Pods */,
 				AE2577B66B16360AC139F20563300296 /* Products */,
 				F426694163F9131F7AD24880D21D5A1C /* Targets Support Files */,
 			);
@@ -91,14 +91,6 @@
 			path = "Target Support Files/Pods-HJQVoiceDemo";
 			sourceTree = "<group>";
 		};
-		A84A55D415E690628557E172F26DE500 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5A69128BF075687E7A9BB79D6A72A3DE /* MMiflyMSC */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		AE2577B66B16360AC139F20563300296 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +105,14 @@
 				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E21ACBE196BE223DD279A668D2129CD5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0091A63E7FD4ADC94C3A124B8BEFCB7D /* HJQiflyMSC */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		F426694163F9131F7AD24880D21D5A1C /* Targets Support Files */ = {
