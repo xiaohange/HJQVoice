@@ -4,8 +4,9 @@
 一款在科大讯飞基础上二次开发的语音识别功能的开源框架，目前支持两种样式：
 - 1.键盘上方语音按钮；
 - 2.按钮调用自定义语音界面；
+### 两种样式:
 ![](https://github.com/xiaohange/HJQVoice/blob/master/v1.1.png?raw=true)
-
+### 效果如下:
 ![](https://github.com/xiaohange/HJQVoice/blob/master/v1.gif?raw=true)
 
 ## Installation
